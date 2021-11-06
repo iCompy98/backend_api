@@ -3,6 +3,10 @@ const router = express.Router();
 
 const mysqlConnection = require('../connectionDatabase');
 
+router.get('/', (req,res)=>{
+    res.send({"message": "Mi primera pruebabnfvcbnvch"});
+})
+
 //Consulta de todas las preguntas
 router.get('/preguntas', (req, res) =>{
     mysqlConnection.query('SELECT * from preguntas_test1', (err,rows,fields) =>{
